@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreItemSupplierRequest;
 use App\Models\ItemSupplier;
 
-class ItemSupplierController extends Controller
+class ItemSupplierController extends Controller 
 {
     /**
      * Display a listing of the resource.

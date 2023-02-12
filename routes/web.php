@@ -75,6 +75,8 @@ Route::get('collect_fee/student/{id}', [\App\Http\Controllers\Super\Fee\CollectF
 
 Route::post('paid_fee/store', [\App\Http\Controllers\Super\Fee\CollectFeeController::class, 'paidFee'])->name('paid_fee.store');
 
+Route::post('/voucherdetails',[\App\Http\Controllers\Account\voucherController::class,'getvoucher'])->name('voucherdetails');
+
 
 
 //Route::group(['prefix' => 'admin'], function() {

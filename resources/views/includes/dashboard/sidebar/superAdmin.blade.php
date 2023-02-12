@@ -228,36 +228,36 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{route('account.category.index') }}">Category</a></li>
-                    <li>
+                    <li class="{{ (request()->is('account/voucher*')) ? 'mm-active' : '' }}">
                         <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                             Voucher
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Unapproved Journal Voucher</a></li>
-                            <li><a href="#">Approved Journal Voucher</a></li>
-                            <li><a href="#">Rejected Voucher</a></li>
+                            <li><a href="{{route('account.voucher.getupapproved') }}">Unapproved Voucher</a></li>
+                            <li><a href="{{route('account.voucher.getapproved') }}">Approved Voucher</a></li>
+                            <li><a href="{{route('account.voucher.rejected') }}">Rejected Voucher</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ (request()->is('account/voucherentry*')) ? 'mm-active' : '' }}">
                         <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                             Voucher Entry
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Journal Voucher Entry</a></li>
-                            <li><a href="#">Payment Voucher Entry</a></li>
-                            <li><a href="#">Receipt Voucher Entry</a></li>
+                            <li><a href="{{route('account.voucherentry.journalentry') }}">Journal Entry</a></li>
+                            <li><a href="{{route('account.voucherentry.receiptentry') }}">Income Entry</a></li>
+                            <li><a href="{{route('account.voucherentry.paymententry') }}">Expense Entry</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ (request()->is('account/report*')) ? 'mm-active' : '' }}">
                         <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                             Financial Reports
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Trial Balance</a></li>
-                            <li><a href="#">General Ledger</a></li>
-                            <li><a href="#">Profit & Loss</a></li>
-                            <li><a href="#">Balance Sheet</a></li>
-                            <li><a href="#">Day Book</a></li>
+                            <li><a href="{{route('account.report.trailbalance') }}">Trial Balance</a></li>
+                            <li><a href="{{route('account.report.generalledger') }}">General Ledger</a></li>
+                            <li><a href="{{route('account.report.profilandloss') }}">Profit & Loss</a></li>
+                            <li><a href="{{route('account.report.balancesheet') }}">Balance Sheet</a></li>
+                            <li><a href="{{route('account.report.daybook') }}">Day Book</a></li>
                         </ul>
                     </li>
                 </ul>
